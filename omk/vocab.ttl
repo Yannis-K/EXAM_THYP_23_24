@@ -1,22 +1,25 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix o: <http://omeka.org/s/vocabs/o#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix mov2: <https://jeux_olympiques.univ-paris8.fr/onto/jo#> .
-@prefix ma: <http://www.w3.org/ns/ma-ont#>.
+@prefix jo: <https://jo.univ-paris8.fr/onto/jo#> .
 
 
-<https://jeux_olympiques.univ-paris8.fr/onto/jo#> a owl:Ontology ;
-    dcterms:title "Vocabulaire des Athlètes Olympiques et leurs Pays" .
+
+<https://jo.univ-paris8.fr/onto/jo#> a owl:Ontology ;
+    dcterms:title "jo" .
 
 
-# Classes
+
 jo:Athlete a rdfs:Class ;
-    rdfs:label "athlète" ;
+    rdfs:label "Athlete" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 jo:Event a rdfs:Class ;
-    rdfs:label "événement" ;
+    rdfs:label "Event" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
@@ -26,13 +29,13 @@ jo:Pays a rdfs:Class ;
     vs:term_status "experimental" .
 
 jo:Medaille a rdfs:Class ;
-    rdfs:label "médaille" ;
+    rdfs:label "Medaille" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-# Propriétés
+
 jo:name a rdf:Property ;
-    rdfs:label "nom" ;
+    rdfs:label "name" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
@@ -42,17 +45,17 @@ jo:pays a rdf:Property ;
     vs:term_status "experimental" .
 
 jo:participe_a a rdf:Property ;
-    rdfs:label "participe à" ;
+    rdfs:label "participe_a" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 jo:eventType a rdf:Property ;
-    rdfs:label "type d'événement" ;
+    rdfs:label "eventType" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 jo:medailleType a rdf:Property ;
-    rdfs:label "type de médaille" ;
+    rdfs:label "medailleType" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
@@ -62,7 +65,12 @@ jo:win_by a rdf:Property ;
     vs:term_status "experimental" .
 
 jo:decernee_lors_de a rdf:Property ;
-    rdfs:label "décernée lors de" ;
+    rdfs:label "decernee_lors_de" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+jo:dicipline a rdf:Property ;
+    rdfs:label "dicipline" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
