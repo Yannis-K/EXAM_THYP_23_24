@@ -1,0 +1,69 @@
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix mov2: <https://jeux_olympiques.univ-paris8.fr/onto/jo#> .
+@prefix ma: <http://www.w3.org/ns/ma-ont#>.
+
+
+<https://jeux_olympiques.univ-paris8.fr/onto/jo#> a owl:Ontology ;
+    dcterms:title "Vocabulaire des Athlètes Olympiques et leurs Pays" .
+
+
+# Classes
+jo:Athlete a rdfs:Class ;
+    rdfs:label "athlète" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+jo:Event a rdfs:Class ;
+    rdfs:label "événement" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+jo:Pays a rdfs:Class ;
+    rdfs:label "pays" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+jo:Medaille a rdfs:Class ;
+    rdfs:label "médaille" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+# Propriétés
+jo:name a rdf:Property ;
+    rdfs:label "nom" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+jo:pays a rdf:Property ;
+    rdfs:label "pays" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+jo:participe_a a rdf:Property ;
+    rdfs:label "participe à" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+jo:eventType a rdf:Property ;
+    rdfs:label "type d'événement" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+jo:medailleType a rdf:Property ;
+    rdfs:label "type de médaille" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+jo:win_by a rdf:Property ;
+    rdfs:label "win_by" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+jo:decernee_lors_de a rdf:Property ;
+    rdfs:label "décernée lors de" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
