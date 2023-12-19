@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <title>Données des Athlètes</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        #testAPI {
+            margin-top: 20px;
+        }
+
+        .data-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .data-name {
+            color: #1a1a1a;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Données des Athlètes</h1>
+        <div id="testAPI"></div>
+        
+    </body>
+
+    <script>
+function ShowItems(data) {
+    console.log(data);
+   
+
+    const mainDiv = d3.select("#testAPI");
+
+    const dataItems = mainDiv
+        .selectAll(".data-item")
+        .data(data)
+        .enter()
+        .append("div")
+        .attr("class", "data-item");
+
+    dataItems.each(function (item) {
+        const currentItem = d3.select(this);
+
+        if (item['jo:name']) {
+            item['jo:name'].forEach(name => {
+                if (name['@value']) {
+                    currentItem
+                        .append("div")
+                        .attr("class", "data-name")
+                        .text(name['@value']);
+                }
+            });
+        }
+
+       
+
+    });
+}
+
+
+function loadData(url) {
+    const script = document.createElement("script");
+    script.src = url;
+    document.body.appendChild(script);
+}
+
+const API_URL = "http://localhost:80/omeka-s/api/items?callback=ShowItems";
+loadData(API_URL);
+
+
+
+    </script>
+</html>
