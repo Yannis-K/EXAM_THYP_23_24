@@ -1,0 +1,71 @@
+{
+    "o:label": "Medaille",
+    "o:resource_template_property": [
+        {
+            "o:alternate_label": null,
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": false,
+            "o:default_lang": null,
+            "data_types": [],
+            "vocabulary_namespace_uri": "https:\/\/jo.univ-paris8.fr\/onto\/jo#",
+            "vocabulary_label": "jo",
+            "local_name": "eventType",
+            "label": "eventType"
+        },
+        {
+            "o:alternate_label": null,
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": false,
+            "o:default_lang": null,
+            "data_types": [],
+            "vocabulary_namespace_uri": "https:\/\/jo.univ-paris8.fr\/onto\/jo#",
+            "vocabulary_label": "jo",
+            "local_name": "dicipline",
+            "label": "dicipline"
+        },
+        {
+            "o:alternate_label": null,
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": false,
+            "o:default_lang": null,
+            "data_types": [],
+            "vocabulary_namespace_uri": "https:\/\/jo.univ-paris8.fr\/onto\/jo#",
+            "vocabulary_label": "jo",
+            "local_name": "name",
+            "label": "name"
+        },
+        {
+            "o:alternate_label": null,
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": false,
+            "o:default_lang": null,
+            "data_types": [],
+            "vocabulary_namespace_uri": "https:\/\/jo.univ-paris8.fr\/onto\/jo#",
+            "vocabulary_label": "jo",
+            "local_name": "win_by",
+            "label": "win_by"
+        },
+        {
+            "o:alternate_label": null,
+            "o:alternate_comment": null,
+            "o:is_required": false,
+            "o:is_private": false,
+            "o:default_lang": null,
+            "data_types": [],
+            "vocabulary_namespace_uri": "https:\/\/jo.univ-paris8.fr\/onto\/jo#",
+            "vocabulary_label": "jo",
+            "local_name": "decernee_lors_de",
+            "label": "decernee_lors_de"
+        }
+    ],
+    "o:resource_class": {
+        "vocabulary_namespace_uri": "https:\/\/jo.univ-paris8.fr\/onto\/jo#",
+        "vocabulary_label": "jo",
+        "local_name": "Medaille",
+        "label": "Medaille"
+    }
+}
